@@ -1,4 +1,4 @@
-import { PropertyColumnPresenter } from "./property_column_presenter";
+import { BoardPresenter } from "./board_presenter";
 
 function createFakeCard (id, price) {
   return {
@@ -9,14 +9,14 @@ function createFakeCard (id, price) {
   }
 }
 
-describe("PropertyColumnPresenter", () => {
+describe("boardPresenter", () => {
   let cards;
   beforeEach(() => {
     cards = [];
   });
 
   it("Can add new card", () => {
-    const presenter = new PropertyColumnPresenter();
+    const presenter = new BoardPresenter();
     const fakeCard = createFakeCard(1, 2);
     cards = presenter.addCard(cards, fakeCard);
 
@@ -24,7 +24,7 @@ describe("PropertyColumnPresenter", () => {
   });
 
   it("Can remove existed card", () => {
-    const presenter = new PropertyColumnPresenter();
+    const presenter = new BoardPresenter();
     const fakeCard = createFakeCard(1, 2);
     cards = [fakeCard];
     cards = presenter.removeCard(cards, 1);
@@ -33,7 +33,7 @@ describe("PropertyColumnPresenter", () => {
   });
 
   it("Does not remove any card if ID does not match", () => {
-    const presenter = new PropertyColumnPresenter();
+    const presenter = new BoardPresenter();
     const fakeCard = createFakeCard(1, 2);
     cards = [fakeCard];
     presenter.removeCard(cards, 42);

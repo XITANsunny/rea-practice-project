@@ -1,4 +1,4 @@
-export class PropertyColumnPresenter {
+export class BoardPresenter {
   addCard(cards, card) {
     return cards.concat(card);
   }

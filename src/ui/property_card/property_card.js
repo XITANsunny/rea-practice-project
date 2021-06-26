@@ -19,7 +19,6 @@ export function PropertyCard(props) {
   const buttonText = `${isSaved ? "Remove" : "Add"} property `;
   const buttonColor = isSaved ? "#EECDCD" : "#DEEBD7";
   const onMouseLeaveCard = (e) => {
-    console.log(e);
     setDisplayButton(false);
   };
   return (
