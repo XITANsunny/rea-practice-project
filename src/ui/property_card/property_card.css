@@ -1,0 +1,17 @@
+.propertyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  position: relative;
+}
+
+.propertyCard .preview {
+  width: 200px;
+}
+
+.propertyCard button {
+  bottom: 40px;
+  position: absolute;
+}
